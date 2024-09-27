@@ -1,11 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.social-links img {
-    width: 30px;  /* 画像の幅を30pxに指定 */
-    height: auto;  /* 高さは自動で調整されるように */
-    margin-right: 10px;  /* 画像の間隔を取るためにマージンを追加 */
+.container {
+    width: 80%; /* ページ全体を80%幅に制限 */
+    margin: 0 auto; /* 中央に配置 */
+}
+
+header {
+    text-align: center; /* ヘッダーは中央揃え */
+    margin-top: 20px;
+}
+
+.profile {
+    text-align: left; /* プロフィールセクションは左揃え */
+    margin-bottom: 40px;
 }
 
 .profile-picture {
@@ -28,6 +39,7 @@ body {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .publication-details {
@@ -57,10 +69,18 @@ body {
     margin-right: 15px;
 }
 
+.social-links img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
 h2 {
     margin-top: 40px;
+    text-align: left; /* タイトルも左揃え */
 }
 
 .presentations ol li {
     margin-bottom: 10px;
+    text-align: left; /* プレゼンテーションリストも左揃え */
 }
