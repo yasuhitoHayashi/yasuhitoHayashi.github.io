@@ -170,3 +170,14 @@ h2 {
 .grants ol li {
     color: #555;
 }
+
+/* フッターを固定 */
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #666;
+    margin-top: auto; /* フッターをページの最下部に配置 */
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
