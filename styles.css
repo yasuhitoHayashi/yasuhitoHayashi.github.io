@@ -6,14 +6,14 @@ body {
 }
 
 .container {
-    width: 70%; /* ページ全体を70%幅に制限 */
+    width: 70%;
     margin: 0 auto; /* 中央に配置 */
 }
 
 header {
     text-align: center;
     margin-top: 20px;
-    color: #333; /* ヘッダーの文字色も濃い灰色に */
+    color: #333;
 }
 
 .profile {
@@ -29,57 +29,62 @@ header {
 .profile p {
     font-size: 1.2em;
     margin-top: 10px;
-    color: #555; /* プロフィール内の説明文を少し薄い灰色に */
+    color: #555;
 }
 
 .thumbnail {
     width: 100px;
     height: auto;
     margin-right: 20px;
+    aspect-ratio: 1/1; /* 縦横比を1:1に固定 */
 }
 
 .publication-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
-    min-height: 100px; /* 画像がなくても高さを確保 */
-    color: #333; /* 各出版物のテキストも濃い灰色に設定 */
+    min-height: 100px;
+    color: #333;
 }
 
 .publication-details {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 縦方向で整列 */
+    justify-content: center;
 }
 
 .publication-title a {
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
-    color: #333; /* タイトルも濃い灰色に */
+    color: #333;
 }
 
 .publication-authors {
     font-size: 0.9em;
     margin-top: 5px;
-    color: #555; /* 著者名を少し薄い灰色に */
+    color: #555;
 }
 
 .publication-journal {
     font-size: 0.8em;
-    color: #777; /* ジャーナル名をさらに薄い灰色に設定 */
+    color: #777;
     margin-top: 5px;
 }
 
 .publication-item img {
     margin-right: 15px;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1; /* 画像の縦横比を1:1に固定 */
 }
 
 .publication-item .thumbnail-placeholder {
-    width: 100px;  /* 画像と同じ幅を確保 */
-    height: 100px; /* 画像と同じ高さを確保 */
-    margin-right: 15px; 
-    background-color: #f0f0f0; /* プレースホルダーとして背景色を設定 */
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
 }
 
 .social-links img {
@@ -91,19 +96,19 @@ header {
 h2 {
     margin-top: 40px;
     text-align: left;
-    color: #333; /* 各セクションのタイトルも濃い灰色に */
+    color: #333;
 }
 
 .presentations ol li, .grants ol li {
     margin-bottom: 10px;
     text-align: left;
-    color: #333; /* リスト項目も全体を濃い灰色に */
+    color: #333;
 }
 
 .presentations ol li {
-    color: #555; /* プレゼンテーション項目を少し薄い灰色に */
+    color: #555;
 }
 
 .grants ol li {
-    color: #555; /* 助成金項目も少し薄い灰色に */
+    color: #555;
 }
