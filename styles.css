@@ -43,7 +43,7 @@ h2 {
 
 body {
     font-family: Arial, sans-serif;
-    margin-top: 60px; /* 固定されたナビゲーションバーの分だけコンテンツを下げる */
+    margin: 60;
     padding: 0;
     color: #333; /* テキスト全体の色を濃い灰色に設定 */
 }
