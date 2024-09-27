@@ -2,16 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333; /* テキスト全体の色を濃い灰色に設定 */
 }
 
 .container {
-    width: 70%; /* ページ全体を80%幅に制限 */
+    width: 70%; /* ページ全体を70%幅に制限 */
     margin: 0 auto; /* 中央に配置 */
 }
 
 header {
     text-align: center;
     margin-top: 20px;
+    color: #333; /* ヘッダーの文字色も濃い灰色に */
 }
 
 .profile {
@@ -27,6 +29,7 @@ header {
 .profile p {
     font-size: 1.2em;
     margin-top: 10px;
+    color: #555; /* プロフィール内の説明文を少し薄い灰色に */
 }
 
 .thumbnail {
@@ -40,6 +43,7 @@ header {
     align-items: flex-start;
     margin-bottom: 20px;
     min-height: 100px; /* 画像がなくても高さを確保 */
+    color: #333; /* 各出版物のテキストも濃い灰色に設定 */
 }
 
 .publication-details {
@@ -52,17 +56,18 @@ header {
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: #333; /* タイトルも濃い灰色に */
 }
 
 .publication-authors {
     font-size: 0.9em;
     margin-top: 5px;
+    color: #555; /* 著者名を少し薄い灰色に */
 }
 
 .publication-journal {
     font-size: 0.8em;
-    color: #555;
+    color: #777; /* ジャーナル名をさらに薄い灰色に設定 */
     margin-top: 5px;
 }
 
@@ -86,14 +91,19 @@ header {
 h2 {
     margin-top: 40px;
     text-align: left;
+    color: #333; /* 各セクションのタイトルも濃い灰色に */
+}
+
+.presentations ol li, .grants ol li {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333; /* リスト項目も全体を濃い灰色に */
 }
 
 .presentations ol li {
-    margin-bottom: 10px;
-    text-align: left;
+    color: #555; /* プレゼンテーション項目を少し薄い灰色に */
 }
 
 .grants ol li {
-    margin-bottom: 10px;
-    text-align: left;
+    color: #555; /* 助成金項目も少し薄い灰色に */
 }
