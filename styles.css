@@ -90,6 +90,8 @@ header {
 .social-links {
     display: flex; /* フレックスボックスでアイコンを並べる */
     gap: 10px; /* アイコン間のスペースを調整 */
+    text-align: center; /* アイコンを中央揃えにする */
+
 }
 
 .social-links img {
