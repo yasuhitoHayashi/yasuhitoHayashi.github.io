@@ -15,7 +15,7 @@ header {
 }
 
 .profile {
-    text-align: left; /* プロフィールセクションは左揃え */
+    text-align: center; /* プロフィールセクションは左揃え */
     margin-bottom: 40px;
 }
 
