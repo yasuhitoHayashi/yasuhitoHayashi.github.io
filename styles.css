@@ -87,11 +87,14 @@ header {
     aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
 }
 
+.social-links {
+    display: flex; /* フレックスボックスでアイコンを並べる */
+    gap: 10px; /* アイコン間のスペースを調整 */
+}
+
 .social-links img {
     width: 30px;
     height: auto;
-    margin-right: 10px;
-    display: flex; /* フレックスボックスでアイコンを並べる */
 }
 
 h2 {
