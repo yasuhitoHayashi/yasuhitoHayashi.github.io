@@ -45,6 +45,7 @@ header {
 .publication-details {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* 縦方向で整列 */
 }
 
 .publication-title a {
