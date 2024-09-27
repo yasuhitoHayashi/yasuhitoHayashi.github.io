@@ -54,6 +54,33 @@ a {
     text-decoration: none;
 }
 
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.publication-details {
+    flex-grow: 1;
+}
+
+.publication-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.publication-authors {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.publication-journal {
+    font-style: italic;
+    color: gray;
+    margin-bottom: 10px;
+
+
 a:hover {
     text-decoration: underline;
 }
