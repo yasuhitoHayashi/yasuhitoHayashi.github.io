@@ -91,7 +91,12 @@ header {
     display: flex; /* フレックスボックスでアイコンを並べる */
     gap: 10px; /* アイコン間のスペースを調整 */
     text-align: center; /* アイコンを中央揃えにする */
+}
 
+.social-links a {
+    display: inline-block;
+    vertical-align: middle; /* アイコンを中央揃え */
+    margin-right: 10px; /* アイコン間のスペースを調整 */
 }
 
 .social-links img {
