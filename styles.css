@@ -5,17 +5,17 @@ body {
 }
 
 .container {
-    width: 80%; /* ページ全体を80%幅に制限 */
+    width: 70%; /* ページ全体を80%幅に制限 */
     margin: 0 auto; /* 中央に配置 */
 }
 
 header {
-    text-align: center; /* ヘッダーは中央揃え */
+    text-align: center;
     margin-top: 20px;
 }
 
 .profile {
-    text-align: center; /* プロフィールセクションは左揃え */
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -77,10 +77,15 @@ header {
 
 h2 {
     margin-top: 40px;
-    text-align: left; /* タイトルも左揃え */
+    text-align: left;
 }
 
 .presentations ol li {
     margin-bottom: 10px;
-    text-align: left; /* プレゼンテーションリストも左揃え */
+    text-align: left;
+}
+
+.grants ol li {
+    margin-bottom: 10px;
+    text-align: left;
 }
