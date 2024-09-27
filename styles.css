@@ -91,6 +91,7 @@ header {
     width: 30px;
     height: auto;
     margin-right: 10px;
+    text-decoration: none; /* アンダーバーを削除 */
 }
 
 h2 {
