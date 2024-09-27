@@ -1,6 +1,49 @@
+/* ナビゲーションバーのスタイル */
+.navbar {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* 下線を追加 */
+    position: fixed; /* ナビゲーションバーを固定 */
+    top: 0;
+    width: 100%; /* 画面の幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素の上に表示されるように */
+}
+
+.navbar ul {
+    list-style-type: none; /* ドットを消す */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 水平方向に並べる */
+    justify-content: space-around; /* 要素間を均等に配置 */
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none; /* 下線を消す */
+    font-weight: bold; /* 太字 */
+    color: #666; /* グレー色 */
+    font-size: 18px; /* フォントサイズを調整 */
+}
+
+.navbar ul li a:hover {
+    color: #333; /* マウスオーバー時の色変更 */
+}
+
+body {
+    margin-top: 60px; /* 固定されたナビゲーションバーの分だけコンテンツを下げる */
+}
+
+h2 {
+    margin-top: 50px; /* 各セクションのタイトルの余白 */
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-top: 60px; /* 固定されたナビゲーションバーの分だけコンテンツを下げる */
     padding: 0;
     color: #333; /* テキスト全体の色を濃い灰色に設定 */
 }
@@ -14,6 +57,10 @@ header {
     text-align: center;
     margin-top: 20px;
     color: #333;
+}
+
+section {
+    scroll-margin-top: 70px; /* ナビゲーションバーの高さに合わせた余白を追加 */
 }
 
 .profile {
@@ -88,8 +135,7 @@ header {
 }
 
 .social-links {
-    display: flex; /* フレックスボックスでアイコンを並べる */
-    gap: 10px; /* アイコン間のスペースを調整 */
+    white-space: nowrap; /* 改行や空白を無視 */
     text-align: center; /* アイコンを中央揃えにする */
 }
 
@@ -105,7 +151,7 @@ header {
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: left;
     color: #333;
 }

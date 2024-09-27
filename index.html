@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Yasuhito Hayashi</h1>
-        </header>
-        
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Yasuhito Hayashi</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#grants">Grants</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">        
         <section class="profile">
             <img src="yasuhito_pic.jpeg" alt="Yasuhito Hayashi's Profile Picture" class="profile-picture">
+            <h1>Yasuhito Hayashi</h1>
             <p>Ph.D. in Science<br>(Biological Oceanography)</p>
             <div class="social-links">
                 <a href="https://scholar.google.co.jp/citations?user=IRMc1mwAAAAJ&hl=ja&oi=ao">
@@ -26,7 +34,7 @@
             </div>
         </section>
         
-        <section class="publications">
+        <section id="publications" class="publications">
             <h2>Publications</h2>
             <ul>
                 <li class="publication-item">
@@ -87,7 +95,7 @@
             </ol>
         </section>
 
-        <section class="grants">
+        <section id="grants" class="grants">
             <h2>Grants</h2>
             <ol>
                 <li>日本沿岸域学会 令和 6 年度研究グループ助成金, 30 万円, 2024 年 6 月-2025 年 6 月</li>
