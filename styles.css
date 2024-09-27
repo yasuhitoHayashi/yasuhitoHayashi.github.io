@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.social-links img {
+    width: 30px;  /* 画像の幅を30pxに指定 */
+    height: auto;  /* 高さは自動で調整されるように */
+    margin-right: 10px;  /* 画像の間隔を取るためにマージンを追加 */
+}
+
 .profile-picture {
     width: 150px;
     border-radius: 50%;
