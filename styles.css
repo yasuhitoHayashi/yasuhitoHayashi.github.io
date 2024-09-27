@@ -39,7 +39,7 @@ header {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
-    text-align: left;
+    min-height: 100px; /* 画像がなくても高さを確保 */
 }
 
 .publication-details {
