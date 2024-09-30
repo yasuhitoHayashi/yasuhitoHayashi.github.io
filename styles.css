@@ -7,27 +7,32 @@
     top: 0;
     width: 100%; /* 画面の幅いっぱいに広げる */
     z-index: 1000; /* 他の要素の上に表示されるように */
+    box-sizing: border-box; /* はみ出さないように調整 */
 }
 
 .navbar ul {
-    list-style-type: none; /* ドットを消す */
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* 水平方向に並べる */
-    justify-content: space-around; /* 要素間を均等に配置 */
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* 狭い画面で折り返し可能にする */
 }
 
 .navbar ul li {
-    display: inline;
+    flex: 1; /* 各リンクを等間隔で配置 */
+    text-align: center; /* リンクを中央揃え */
 }
 
 .navbar ul li a {
-    text-decoration: none; /* 下線を消す */
-    font-weight: bold; /* 太字 */
-    color: #666; /* グレー色 */
-    font-size: 18px; /* フォントサイズを調整 */
+    text-decoration: none;
+    font-weight: bold;
+    color: #666;
+    font-size: 18px;
+    white-space: nowrap; /* テキストが折り返さないように */
 }
+
 
 .navbar ul li a:hover {
     color: #333; /* マウスオーバー時の色変更 */
@@ -41,12 +46,16 @@ h2 {
     margin-top: 50px; /* 各セクションのタイトルの余白 */
 }
 
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 60;
-    padding: 0;
-    color: #333; /* テキスト全体の色を濃い灰色に設定 */
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box; /* はみ出しを防ぐ */
 }
+
+
 
 .container {
     width: 70%;
@@ -171,13 +180,41 @@ h2 {
     color: #555;
 }
 
+/* スマホなど横幅が狭い場合のレイアウト調整 */
+@media (max-width: 768px) {
+    /* 他のメニューを非表示にする */
+    .menu-item {
+        display: none;
+    }
+
+    /* Yasuhito Hayashiだけを表示し、クリックでトップに戻る */
+    .navbar ul li:first-child a {
+        display: inline-block;
+    }
+
+    .navbar ul {
+        justify-content: center; /* メニューを中央揃えにする */
+    }
+
+    body {
+        margin-top: 60px;
+        width: 100%; /* 横幅が狭いときは100%使う */
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto; /* 中央に配置 */
+    }
+
+}
+
 /* フッターを固定 */
 .site-footer {
     text-align: center;
     padding: 10px;
     background-color: #f8f8f8;
     color: #666;
-    margin-top: auto; /* フッターをページの最下部に配置 */
+    margin-top: auto;
     border-top: 1px solid #ccc;
     width: 100%;
 }
