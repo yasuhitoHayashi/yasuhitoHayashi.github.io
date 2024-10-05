@@ -95,6 +95,7 @@ section {
     aspect-ratio: 1/1; /* 縦横比を1:1に固定 */
 }
 
+/* Publications */
 .publication-item {
     display: flex;
     align-items: flex-start;
@@ -118,13 +119,13 @@ section {
 
 
 .publication-authors {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 5px;
     color: #555;
 }
 
 .publication-journal {
-    font-size: 0.8em;
+    font-size: 1em;
     color: #777;
     margin-top: 5px;
 }
@@ -144,6 +145,51 @@ section {
     aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
 }
 
+/* Projects */
+.projects-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    min-height: 100px;
+    color: #333;
+}
+
+.projects-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-title a {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.projects-comments {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #555;
+}
+
+.projects-item img {
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1; /* 画像の縦横比を1:1に固定 */
+}
+
+.projects-item .thumbnail-placeholder {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
+}
+
+/* social */
 .social-links {
     white-space: nowrap; /* 改行や空白を無視 */
     text-align: center; /* アイコンを中央揃えにする */
