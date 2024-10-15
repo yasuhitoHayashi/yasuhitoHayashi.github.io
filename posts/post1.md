@@ -13,6 +13,3 @@ To compile OpenEB v5.0.0 on my M1 MacBook Air, I needed to replace #include <GL/
 ```bash
 find ./ -type f \( -name ".cpp" -o -name ".h" \) -exec sed -i '' 's/#include <GL\/gl\.h>/#include <OpenGL\/gl.h>/g' {} +
 ```
-
-3. 画像表示テスト
-![me](items/yasuhito_pic.jpeg "me")
