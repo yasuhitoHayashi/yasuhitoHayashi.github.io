@@ -252,24 +252,21 @@ h2 {
 
     .menu-item {
         display: none; /* 初期状態では非表示 */
+        width: 100%; /* 幅を全体に広げる */
     }
 
     .menu-item.show {
         display: block; /* showクラスが付与された場合に表示 */
         background-color: #fff;
         padding: 10px;
-        text-align: center;
+        text-align: left; /* メニュー項目を左寄せに */
         border-top: 1px solid #ccc;
     }
 
     .navbar ul {
         flex-direction: column; /* メニューを縦に並べる */
-        align-items: flex-start;
-    }
-
-    .navbar ul li:first-child {
-        width: 100%;
-        text-align: center;
+        align-items: stretch; /* リスト項目を幅いっぱいに広げる */
+        width: 100%; /* ナビゲーション全体の幅 */
     }
 
     .navbar ul li a {
