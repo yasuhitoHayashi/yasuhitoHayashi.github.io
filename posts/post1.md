@@ -1,5 +1,5 @@
 # How to Compile OpenEB v5.0.0 on M1 mac envirionment
-2024-10-03
+October-10-2024
 
 In October 2024, PROPHESEE published an updated version of the Metavision SDK with Open Modules. Here, I outline the steps to compile OpenEB v5.0.0 in an M1 MacBook Air environment.
 

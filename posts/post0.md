@@ -1,5 +1,5 @@
 # Template
-1996-05-19
+May-19-1996
 
 This is a template for my blog posts.
 
