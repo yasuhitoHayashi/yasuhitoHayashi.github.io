@@ -15,4 +15,4 @@ find ./ -type f \( -name ".cpp" -o -name ".h" \) -exec sed -i '' 's/#include <GL
 ```
 
 3. 画像表示テスト
-![海の画像](posts/pics/000038.JPG "海の写真")
+![me](items/yasuhito_pic.jpeg "me")
