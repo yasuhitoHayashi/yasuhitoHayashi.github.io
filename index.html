@@ -7,14 +7,34 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-791LS3LC9K');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasuhito Hayashi</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMenu() {
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.toggle('show');
+            });
+        }
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuLinks = document.querySelectorAll('.menu-item a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // メニューが開いている場合のみ閉じる
+                    const menuItems = document.querySelectorAll('.menu-item');
+                    if (menuItems[0].classList.contains('show')) {
+                        menuItems.forEach(item => item.classList.remove('show'));
+                    }
+                });
+            });
+        });
+    </script>
 </head>
+
     
 <body>
     <header>
@@ -26,6 +46,8 @@
                 <li class="menu-item"><a href="links.html">Links</a></li>
                 <li class="menu-item"><a href="blog.html">BLOG</a></li>
             </ul>
+            <!-- ハンバーガーメニューアイコン -->
+            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 

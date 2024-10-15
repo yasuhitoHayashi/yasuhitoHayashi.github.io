@@ -1,13 +1,13 @@
-# サンプルブログ記事のタイトル
-更新日: 2024年10月1日
+# How to Compile OpenEB v5.0.0 on M1 mac envirionment
+2024-10-03
 
-この記事の概要や、イントロダクションを簡潔に記載します。
+In October 2024, PROPHESEE published an updated version of the Metavision SDK with Open Modules. Here, I outline the steps to compile OpenEB v5.0.0 in an M1 MacBook Air environment.
 
-## セクション1: 背景
-ここに記事の背景について記載します。
+1. Install dependencies
+With Homebrew, you need to install the dependencies as normal installation on the different environment.
 
-## セクション2: 詳細
-研究内容や手法、結果について記載します。
-
-## 結論
-結論と考察をまとめます。
+2. <GL/gl.h> to <OpenGL/gl.h>
+To compile OpenEB v5.0.0 on my M1 MacBook Air, I needed to replace #include <GL/gl.h> with #include <OpenGL/gl.h> in all .cpp and .h files to ensure compatibility with macOS’s OpenGL library structure. I used the following command to make the change across all files:
+```
+find ./ -type f \( -name ".cpp" -o -name ".h" \) -exec sed -i '' 's/#include <GL\/gl\.h>/#include <OpenGL\/gl.h>/g' {} +
+```

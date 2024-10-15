@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then(posts => {
-            posts.forEach(post => {
+            const postPromises = posts.map(post => 
                 fetch(post.url)
                     .then(response => {
                         if (!response.ok) throw new Error(`Failed to load ${post.url}`);
@@ -16,34 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                     .then(markdown => {
                         const lines = markdown.split('\n');
-                        const date = lines[1].trim(); // 2行目の日付を取得
-                        const contentWithoutDate = lines.slice(2).join('\n'); // 3行目以降を取得
-                        
-                        // MarkdownをHTMLに変換
-                        const htmlContent = converter.makeHtml(contentWithoutDate);
+                        let title = lines[0].trim();
+                        title = title.replace(/^#\s*/, ''); // #とスペースを削除
+
+                        const date = new Date(lines[1].trim()); 
+                        const contentWithoutTitleDate = lines.slice(2).join('\n');
+
+                        const htmlContent = converter.makeHtml(contentWithoutTitleDate);
                         const tempDiv = document.createElement("div");
                         tempDiv.innerHTML = htmlContent;
-
-                        // タイトルとイントロを抽出
-                        const title = tempDiv.querySelector("h1")?.textContent || "No Title";
                         const intro = tempDiv.querySelector("p")?.textContent || "No Content";
 
-                        // 記事要素を生成
+                        return { title, date, intro, url: post.url };
+                    })
+                    .catch(error => {
+                        console.error(`Error loading ${post.url}:`, error);
+                        return null;
+                    })
+            );
+
+            Promise.all(postPromises).then(postDataArray => {
+                postDataArray
+                    .filter(post => post !== null)
+                    .sort((a, b) => b.date - a.date)
+                    .forEach(post => {
                         const article = document.createElement("article");
                         article.classList.add("blog-summary");
-                        
+
                         article.innerHTML = `
-                            <h2>${title}</h2>
-                            <p class="blog-date">${date}</p>
-                            <p>${intro}</p>
+                            <h2>${post.title}</h2>
+                            <p class="blog-date">${post.date.toISOString().split('T')[0]}</p>
+                            <p>${post.intro}</p>
                             <a href="blogPostTemplate.html?file=${post.url}" class="read-more">Read More</a>
                         `;
                         
                         blogList.appendChild(article);
-                    })
-                    .catch(error => {
-                        console.error(`Error loading ${post.url}:`, error);
-                        blogList.innerHTML += `<p>記事の読み込みに失敗しました: ${post.url}</p>`;
                     });
             });
         })
