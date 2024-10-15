@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then(markdown => {
                         const lines = markdown.split('\n');
                         let title = lines[0].trim();
-                        title = title.replace(/^#\s*/, ''); // #とスペースを削除
+                        title = title.replace(/^#\s*/, '');
 
                         const dateStr = lines[1].trim();
                         const [monthStr, day, year] = dateStr.split('-');
@@ -32,11 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         const contentWithoutTitleDate = lines.slice(2).join('\n');
                         const htmlContent = converter.makeHtml(contentWithoutTitleDate);
+
                         const tempDiv = document.createElement("div");
                         tempDiv.innerHTML = htmlContent;
                         const intro = tempDiv.querySelector("p")?.textContent || "No Content";
+                        const firstImage = tempDiv.querySelector("img");
 
-                        return { title, date, dateStr, intro, url: post.url };
+                        return { title, date, dateStr, intro, url: post.url, firstImage };
                     })
                     .catch(error => {
                         console.error(`Error loading ${post.url}:`, error);
@@ -47,16 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
             Promise.all(postPromises).then(postDataArray => {
                 postDataArray
                     .filter(post => post !== null)
-                    .sort((a, b) => b.date - a.date) // Dateオブジェクトでソート
+                    .sort((a, b) => b.date - a.date)
                     .forEach(post => {
                         const article = document.createElement("article");
                         article.classList.add("blog-summary");
-
+                        
+                        const imageHTML = post.firstImage ? `<img src="${post.firstImage.src}" alt="Post Image" class="thumbnail-original">` : '';
+                        
                         article.innerHTML = `
-                            <h2>${post.title}</h2>
-                            <p class="blog-date">${post.dateStr}</p> <!-- ソート済み日付を表示 -->
-                            <p>${post.intro}</p>
-                            <a href="blogPostTemplate.html?file=${post.url}" class="read-more">Read More</a>
+                            <div class="thumbnail-container">
+                                ${imageHTML}
+                            </div>
+                            <div class="content-container">
+                                <h2>${post.title}</h2>
+                                <p class="blog-date">${post.dateStr}</p>
+                                <p>${post.intro}</p>
+                                <a href="blogPostTemplate.html?file=${post.url}" class="read-more">Read More</a>
+                            </div>
                         `;
                         
                         blogList.appendChild(article);
