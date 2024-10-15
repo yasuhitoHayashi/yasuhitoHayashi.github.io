@@ -8,6 +8,11 @@ With Homebrew, you need to install the dependencies as normal installation on th
 
 2. <GL/gl.h> to <OpenGL/gl.h>
 To compile OpenEB v5.0.0 on my M1 MacBook Air, I needed to replace #include <GL/gl.h> with #include <OpenGL/gl.h> in all .cpp and .h files to ensure compatibility with macOS’s OpenGL library structure. I used the following command to make the change across all files:
-```
+
+
+```bash
 find ./ -type f \( -name ".cpp" -o -name ".h" \) -exec sed -i '' 's/#include <GL\/gl\.h>/#include <OpenGL\/gl.h>/g' {} +
 ```
+
+3. 画像表示テスト
+![海の画像](posts/pics/000038.JPG "海の写真")

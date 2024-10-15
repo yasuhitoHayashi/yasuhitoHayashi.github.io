@@ -320,3 +320,41 @@ h2 {
     color: #007bff;
     text-decoration: none;
 }
+
+/* コードブロックのスタイル */
+pre code {
+    display: block;
+    background-color: #f5f5f5; /* 灰色の背景色 */
+    color: #333; /* 文字色を少し濃いめに */
+    padding: 10px; /* 内側の余白 */
+    border-radius: 5px; /* 角を丸める */
+    overflow-x: auto; /* 横に長いコードのスクロール対応 */
+    font-family: Consolas, Monaco, 'Courier New', monospace; /* 等幅フォント */
+    font-size: 0.8em; /* 文字サイズを少し小さく */
+    line-height: 1.2; /* 行間を広く */
+}
+
+pre {
+    margin: 15px 0; /* 上下に余白を追加 */
+}
+
+/* ブログの段落のスタイル */
+.blog-post-detail p {
+    line-height: 1.6; /* 行間を広げる */
+    margin: 1.5em 0; /* 段落の上下に余白を追加 */
+}
+
+/* 記事の要約部分のスタイル */
+.blog-summary p {
+    line-height: 1.6; /* 行間を広げる */
+    margin: 1.2em 0; /* 段落の上下に余白を追加 */
+}
+
+/* ブログ内の画像スタイル */
+.blog-post-detail img {
+    max-width: 100%; /* 画像がコンテナの幅を超えないように調整 */
+    height: auto; /* アスペクト比を保持 */
+    display: block;
+    margin: 20px auto; /* 画像を中央寄せ */
+    border-radius: 8px; /* 角を丸める */
+}
