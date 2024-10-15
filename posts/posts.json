@@ -1,5 +1,5 @@
 [
-    {"url": "posts/post1.md", "date": "2024-10-01"},
-    {"url": "posts/post2.md", "date": "2024-09-15"},
-    {"url": "posts/post3.md", "date": "2024-08-01"}
+    {"url": "posts/post1.md"},
+    {"url": "posts/post2.md"},
+    {"url": "posts/post3.md"}
 ]
