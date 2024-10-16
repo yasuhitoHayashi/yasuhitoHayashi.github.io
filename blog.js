@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             article.classList.add("highlight");
                         }
 
-                        const imageHTML = post.firstImage ? `<img src="${post.firstImage.src}" alt="Post Image" class="thumbnail-original">` : '';
-                        
+                        const imageHTML = post.firstImage ? `<img src="${post.firstImage.src}" alt="Post Image" class="thumbnail-original" loading="lazy">` : '';
+                                                
                         article.innerHTML = `
                             <div class="thumbnail-container">
                                 ${imageHTML}
