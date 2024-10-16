@@ -1,6 +1,6 @@
 /* ナビゲーションバーのスタイル */
 .navbar {
-    background-color: white;
+    background-color: #fffdfc;
     padding: 10px;
     border-bottom: 1px solid #ccc;
     position: fixed;
@@ -46,20 +46,19 @@
 
 
 body {
-    margin-top: 60px; /* 固定されたナビゲーションバーの分だけコンテンツを下げる */
-}
-
-h2 {
-    margin-top: 50px; /* 各セクションのタイトルの余白 */
-}
-
-body {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     box-sizing: border-box; /* はみ出しを防ぐ */
+    background-color: #fffdfc; /* 全ページにくすんだ青色の背景を適用 */
 }
+
+
+h2 {
+    margin-top: 50px; /* 各セクションのタイトルの余白 */
+}
+
 
 .container {
     width: 70%;
@@ -92,11 +91,12 @@ section {
     color: #555;
 }
 
-/* サムネイルの共通スタイル */
 .thumbnail {
     width: 100px;
     height: auto;
     margin-right: 20px;
+    border-radius: 8px;
+    aspect-ratio: 1/1; /* 縦横比を1:1に固定 */
 }
 
 /* Publications */
@@ -121,6 +121,7 @@ section {
     color: #333;
 }
 
+
 .publication-authors {
     font-size: 1em;
     margin-top: 5px;
@@ -137,7 +138,17 @@ section {
     margin-right: 15px;
     width: 100px;
     height: 100px;
-    aspect-ratio: 1/1; /* 縦横比を1:1に固定 */
+    border-radius: 8px;
+    aspect-ratio: 1/1; /* 画像の縦横比を1:1に固定 */
+}
+
+.publication-item .thumbnail-placeholder {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
 }
 
 /* Projects */
@@ -162,6 +173,7 @@ section {
     color: #333;
 }
 
+
 .projects-comments {
     font-size: 1.2em;
     margin-top: 5px;
@@ -172,19 +184,29 @@ section {
     margin-right: 15px;
     width: 100px;
     height: 100px;
-    aspect-ratio: 1/1; /* 縦横比を1:1に固定 */
+    border-radius: 8px;
+    aspect-ratio: 1/1; /* 画像の縦横比を1:1に固定 */
+}
+
+.projects-item .thumbnail-placeholder {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    aspect-ratio: 1/1; /* プレースホルダーの縦横比も1:1に固定 */
 }
 
 /* social */
 .social-links {
-    white-space: nowrap;
-    text-align: center;
+    white-space: nowrap; /* 改行や空白を無視 */
+    text-align: center; /* アイコンを中央揃えにする */
 }
 
 .social-links a {
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+    vertical-align: middle; /* アイコンを中央揃え */
+    margin-right: 10px; /* アイコン間のスペースを調整 */
 }
 
 .social-links img {
@@ -214,7 +236,7 @@ h2 {
 
 /* ハンバーガーメニューのスタイル */
 .hamburger-menu {
-    display: none;
+    display: none; /* デフォルトで非表示 */
     font-size: 24px;
     cursor: pointer;
     color: #666;
@@ -223,28 +245,46 @@ h2 {
     top: 15px;
 }
 
+/* メディアクエリ：幅が768px以下の時にハンバーガーメニューを表示 */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block;
+        display: block; /* 768px以下の画面幅のときに表示 */
     }
 
     .menu-item {
-        display: none;
-        width: 100%;
+        display: none; /* 初期状態では非表示 */
+        width: 100%; /* 幅を全体に広げる */
     }
 
     .menu-item.show {
-        display: block;
-        background-color: #fff;
+        display: block; /* showクラスが付与された場合に表示 */
+        background-color: #fffdfc;
         padding: 10px;
-        text-align: left;
+        text-align: left; /* メニュー項目を左寄せに */
         border-top: 1px solid #ccc;
     }
 
     .navbar ul {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column; /* メニューを縦に並べる */
+        align-items: stretch; /* リスト項目を幅いっぱいに広げる */
+        width: 100%; /* ナビゲーション全体の幅 */
+    }
+
+    .navbar ul li a {
+        display: block;
         width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* 幅が768px以上の場合にハンバーガーメニューを非表示にする */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* 768px以上の画面幅ではハンバーガーメニューを非表示 */
+    }
+
+    .menu-item {
+        display: flex; /* メニュー項目は通常のフレックス表示 */
     }
 }
 
@@ -252,34 +292,43 @@ h2 {
 .site-footer {
     text-align: center;
     padding: 10px;
-    background-color: #f8f8f8;
+    background-color: #fffdfc;
     color: #666;
     margin-top: auto;
     border-top: 1px solid #ccc;
     width: 100%;
 }
 
-/* ブログサムネイルのスタイル */
 .blog-summary {
     display: flex;
     align-items: flex-start;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
+    /*border-bottom: 1px solid #ccc;*/
+    padding: 15px 20px; /* パディングを少し調整 */
     flex-wrap: nowrap;
+    background-color: #f5f5f5; /* くすんだ青色の背景 */
+    border-radius: 8px; /* 角を少し丸める */
+    margin-bottom: 15px; /* ブログ記事間のスペースを確保 */
 }
 
 .thumbnail-container {
     flex-shrink: 0;
-    max-width: 150px;
+    max-width: 150px; /* 必要であればここを変更 */
+    width: auto; /* 幅を固定せず自動で決める */
     margin-right: 15px;
 }
 
-/* オリジナルアスペクト比保持のサムネイル */
 .thumbnail-original {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
+}
+
+.blog-summary {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
 }
 
 .content-container h2 {
@@ -299,36 +348,37 @@ h2 {
 /* コードブロックのスタイル */
 pre code {
     display: block;
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-family: Consolas, Monaco, 'Courier New', monospace;
-    font-size: 0.8em;
-    line-height: 1.2;
+    background-color: #f5f5f5; /* 灰色の背景色 */
+    color: #333; /* 文字色を少し濃いめに */
+    padding: 10px; /* 内側の余白 */
+    border-radius: 5px; /* 角を丸める */
+    overflow-x: auto; /* 横に長いコードのスクロール対応 */
+    font-family: Consolas, Monaco, 'Courier New', monospace; /* 等幅フォント */
+    font-size: 0.8em; /* 文字サイズを少し小さく */
+    line-height: 1.2; /* 行間を広く */
 }
 
 pre {
-    margin: 15px 0;
+    margin: 15px 0; /* 上下に余白を追加 */
 }
 
 /* ブログの段落のスタイル */
 .blog-post-detail p {
-    line-height: 1.6;
-    margin: 1.5em 0;
+    line-height: 1.6; /* 行間を広げる */
+    margin: 1.5em 0; /* 段落の上下に余白を追加 */
 }
 
+/* 記事の要約部分のスタイル */
 .blog-summary p {
-    line-height: 1.6;
-    margin: 1.2em 0;
+    line-height: 1.6; /* 行間を広げる */
+    margin: 1.2em 0; /* 段落の上下に余白を追加 */
 }
 
 /* ブログ内の画像スタイル */
 .blog-post-detail img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* 画像がコンテナの幅を超えないように調整 */
+    height: auto; /* アスペクト比を保持 */
     display: block;
-    margin: 20px auto;
-    border-radius: 8px;
+    margin: 20px auto; /* 画像を中央寄せ */
+    border-radius: 8px; /* 角を丸める */
 }

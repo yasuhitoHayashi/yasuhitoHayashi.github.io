@@ -22,13 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                     .then(markdown => {
                         const lines = markdown.split('\n');
-                        let title = lines[0].trim();
-                        title = title.replace(/^#\s*/, '');
+                        let title = lines[0].trim().replace(/^#\s*/, '');
 
                         const dateStr = lines[1].trim();
                         const [monthStr, day, year] = dateStr.split('-');
-                        const month = monthMap[monthStr];
-                        const date = new Date(year, month, day);
+                        const dateObj = { year: parseInt(year), month: monthMap[monthStr], day: parseInt(day) };
 
                         const contentWithoutTitleDate = lines.slice(2).join('\n');
                         const htmlContent = converter.makeHtml(contentWithoutTitleDate);
@@ -38,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const intro = tempDiv.querySelector("p")?.textContent || "No Content";
                         const firstImage = tempDiv.querySelector("img");
 
-                        return { title, date, dateStr, intro, url: post.url, firstImage };
+                        return { title, dateObj, dateStr, intro, url: post.url, firstImage };
                     })
                     .catch(error => {
                         console.error(`Error loading ${post.url}:`, error);
@@ -49,7 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
             Promise.all(postPromises).then(postDataArray => {
                 postDataArray
                     .filter(post => post !== null)
-                    .sort((a, b) => b.date - a.date)
+                    .sort((a, b) => {
+                        if (a.dateObj.year !== b.dateObj.year) {
+                            return b.dateObj.year - a.dateObj.year;
+                        }
+                        if (a.dateObj.month !== b.dateObj.month) {
+                            return b.dateObj.month - a.dateObj.month;
+                        }
+                        return b.dateObj.day - a.dateObj.day;
+                    })
                     .forEach(post => {
                         const article = document.createElement("article");
                         article.classList.add("blog-summary");

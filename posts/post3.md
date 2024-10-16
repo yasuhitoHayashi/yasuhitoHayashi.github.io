@@ -1,5 +1,4 @@
 # 新青丸KS24-16航海
-featured: true
 August-28-2024
 
 ---

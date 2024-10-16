@@ -1,5 +1,4 @@
 # かいめいKM24-06C航海
-featured: true
 July-07-2024
 
 ---
