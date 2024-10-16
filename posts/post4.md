@@ -4,3 +4,5 @@ April-01-2024
 ---
 
 JAMSTECに着任しました。
+
+![JAM](posts/pics/jam.jpeg "JAM")

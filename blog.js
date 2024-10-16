@@ -31,12 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         const contentWithoutTitleDate = lines.slice(2).join('\n');
                         const htmlContent = converter.makeHtml(contentWithoutTitleDate);
 
+                        // タグを含むかチェック
+                        const isHighlighted = markdown.includes('<!-- highlight -->');
+
                         const tempDiv = document.createElement("div");
                         tempDiv.innerHTML = htmlContent;
                         const intro = tempDiv.querySelector("p")?.textContent || "No Content";
                         const firstImage = tempDiv.querySelector("img");
 
-                        return { title, dateObj, dateStr, intro, url: post.url, firstImage };
+                        return { title, dateObj, dateStr, intro, url: post.url, firstImage, isHighlighted };
                     })
                     .catch(error => {
                         console.error(`Error loading ${post.url}:`, error);
@@ -59,7 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     .forEach(post => {
                         const article = document.createElement("article");
                         article.classList.add("blog-summary");
-                        
+
+                        // 特定のタグがある場合はクラスを追加
+                        if (post.isHighlighted) {
+                            article.classList.add("highlight");
+                        }
+
                         const imageHTML = post.firstImage ? `<img src="${post.firstImage.src}" alt="Post Image" class="thumbnail-original">` : '';
                         
                         article.innerHTML = `

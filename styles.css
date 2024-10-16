@@ -382,3 +382,10 @@ pre {
     margin: 20px auto; /* 画像を中央寄せ */
     border-radius: 8px; /* 角を丸める */
 }
+
+/* ハイライト記事のスタイル */
+.highlight {
+    background-color: #ffd7d7; /* 少しくすんだ青色 */
+    border-radius: 8px;
+    padding: 10px;
+}
