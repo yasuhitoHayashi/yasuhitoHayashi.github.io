@@ -275,6 +275,23 @@ h2 {
         width: 100%;
         padding: 10px 0;
     }
+
+    .container {
+        width: 100%;
+        padding: 0 10px; /* 横のパディングを追加して少し余白を作成 */
+        box-sizing: border-box;
+    }
+
+    .profile, .publications, .projects, .grants {
+        width: 100%;
+        padding: 0 10px; /* セクション全体に余白を追加 */
+        box-sizing: border-box;
+    }
+
+    .site-footer {
+        padding: 10px 15px;
+    }
+
 }
 
 /* 幅が768px以上の場合にハンバーガーメニューを非表示にする */
