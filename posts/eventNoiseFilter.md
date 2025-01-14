@@ -1,5 +1,5 @@
 # Announcing eventNoiseFilter – A Tool for Event-Based Camera Data Denoising
-Jan-11-2024
+January-11-2024
 
 ---
 
