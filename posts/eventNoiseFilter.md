@@ -18,10 +18,11 @@ Here’s what eventNoiseFiltering can do for you:
 - Visualization Tools: Includes scripts for plotting raw, denoised, and aggregated event counts in customizable formats.
 
 #### Input & Output: The left panel shows raw event data (downsampled to 1/10), and the right panel shows denoised results.
-![InputOutput](pics/eventNoiseFilter/plotAll.png)
+![Input](posts/pics/eventNoiseFilter/plotAll.png)
+![Output](posts/pics/eventNoiseFilter/plotFiltered.png)
 
-#### Event Count: Event counts aggregated in 2 ms bins over time.
-![EventCount](pics/eventNoiseFilter/eventCount.png)
+#### Event Count: Event counts aggregated in 50 ms bins over time.
+![EventCount](posts/pics/eventNoiseFilter/plotEventCount.png)
 
 
 ## Sample Data
