@@ -7,12 +7,12 @@ This article is an English translation of a review originally written for submis
 If you are interested in applying event cameras to biological research, feel free to reach out via the email address below.
 
 
-# Introduction
+## Introduction
 When mankind makes new discoveries, they are often accompanied by advances in instrumentation. The spatio-temporal domains that we can learn about have increased through the use of measurement instruments, such as observing distant stars that cannot be seen with the human eye through telescopes and measuring sounds with wavelengths higher than ultrasonic waves that cannot be heard with the human ear through microphones.
 Furthermore, recent developments in machine learning technology, such as deep learning, have not only expanded the spatio-temporal space that can be measured, but have also made it possible for machines to perform tasks such as classification and segmentation without our interpretation (visualization) of the measured data. This evolution in a different direction has led to an increased focus on sensors that have been difficult to utilize with conventional technologies. Event cameras have attracted particular attention in recent years. Event cameras are one type of neuromorphic device based on information transmission by nerves. It has a completely different data format and representation from existing frame-based cameras, and can coexist with temporal resolution and dark performance that are unattainable with conventional frame-based technologies. On the other hand, there are limitations that must be understood by the measurer.
 We have used event cameras to capture images of marine life, particles, and a variety of other organisms, including bats at night. This paper details how this event camera could revolutionize the field of biological observation.
 
-# History of the biological measurement by the imaging system  
+## History of the biological measurement by the imaging system  
 The history of attempts to record visual information is a long one. Early examples include humans depicting wild animals in cave paintings \cite{brumm2021oldest} and Haeckel, equipped with a microscope, producing beautiful illustrations of microscopic marine organisms \cite{bhl182319}. In the 19th century, the advent of photography greatly enhanced techniques for recording spatial information, and this development was constantly accompanied by eye-catching photographs of living creatures. In 1839, the shadow of a plant was directly recorded on photosensitive paper \cite{talbot_album_1839}, a technique dubbed “photogenic drawing.” Subsequently, this recording technology stabilized into a method that captured the light passing through a camera obscura’s lens, leading to the publication of many photographs of nature and organisms from the 19th to the 20th century. The invention of the flash in the 1890s considerably broadened the possibilities of photography. Nighttime images of white-tailed deer were captured by an automated system in which the animal itself triggered the shutter \cite{L.1906}, and in the 1920s, the light of magnesium flares enabled the first color recording of fish swimming naturally underwater \cite{longley1927life}.
 
 Around the same period, technology for capturing high-speed phenomena also evolved. As early as 1870, sequences of galloping horses were already being photographed by using multiple cameras, and fast mechanical shutters made it possible to record continuous motion onto a single strip of film \cite{braun1992picturing}. Stroboscopic technology, developed by Edgerton, enabled extremely short exposures that could not be achieved with mechanical shutters alone, thereby capturing even faster movements such as flying insects and bullets \cite{edgerton1939flash}. This technology significantly contributed to research on the flight of insects \cite{chadwick1939simple,reed1942frequency}. Once film became widely available, photography was popularized; it was later swept into the wave of digitalization, and by the 2000s, anyone could record high-quality photographs and videos on a personal device. Biologists now capture the instantaneous behaviors of organisms under the microscope, while ecologists carry out long-term automatic observations at remote locations through the power of sunlight and the internet \cite{Yasuda2002,swann2011evaluating}. As photographic technology has advanced, biological measurement using images has expanded from descriptive, phenomenon-based approaches to more analytical ones. Moreover, it is increasingly treated as just one among many large datasets—without relying on human interpretation—especially in fields where deep learning is employed.
@@ -21,7 +21,7 @@ In this era, we must once again reconsider the “limitations of biological rese
 
 Measurements in low-light conditions are typically achieved using strobe lights, infrared imaging, or specially designed high-sensitivity cameras, while high-speed objects are captured using high-speed cameras. However, when it comes to “measuring high-speed motion occurring in low-light conditions,” the difficulty rises significantly. Moreover, maintaining a stable power supply in extreme environments such as oceans, mountains, or forests further complicates measurements using existing technologies.
 
-# What is Event Camera?
+## What is Event Camera?
 Event cameras are a type of neuromorphic device that record the spatio-temporal information of light. They are different from conventional cameras in that they record only the changes in light intensity, not the entire image. Each pixel in the sensor independently determines whether to output data, and the output is transferred as a continuous, unsynchronized stream. If the brightnesschange is positive, it is assigned a positive polarity; if negative, it is assigned a negative polarity. This means that the data recorded by event cameras is not a single image, but a series of events that occur at specific times and locations.
 The brightness change, referred to as an “event,” is represented as a time-series dataset consisting of four values: coordinates x, y, polarity, and timestamp. This structure is sparse and unsynchronized, unlike conventional frame-based data. Because synchronization across all pixels is not required, individual pixels can output data continuously at an equivalent rate of 10,000 fps. Furthermore, since data from static objects without brightness changes is not recorded, the camera is highly efficient in terms of power consumption and memory usage.
 
@@ -29,7 +29,7 @@ A notable characteristic of event cameras is their high dynamic range. Incident 
 
 Nevertheless, event cameras uniquely combine low-light performance and high-speed capabilities while minimizing resource usage such as power and storage. As a result, research utilizing event cameras is rapidly increasing \cite{chakravarthi2024recent,gallego2020event,Iddrisu2024survey}. In the field of biology, their application is still in its early stages, much like other technologies that have emerged in the past (Figure 1).
 
-# Current Utilization of Event Cameras and Applications in industrial fields
+## Current Utilization of Event Cameras and Applications in industrial fields
 
 For any sensor, it is necessary to represent the acquired data in a format that can be interpreted and analyzed. In the case of event data, attempts have been made to frame events by projecting them onto a plane within a certain time range, allowing the use of well-developed image processing techniques designed for frame-based cameras \cite{kogler2009bio}. While this approach has the advantage of leveraging existing analysis methods \cite{gallego2020event,hamann2024mousesis}, it fails to fully utilize the high temporal resolution and event frequency, which are characteristic of event cameras.
 
@@ -45,13 +45,13 @@ Similarly, the ability to digitize subtle vibrations has shown that event camera
 
 Another noteworthy application of event cameras is privacy-conscious activity monitoring in hospitals and care facilities. Event cameras, capable of functioning in low-light environments, can digitize the movements of individuals on beds or in hallways, regardless of time of day, thus helping reduce the operational burden on facility staff \cite{coram2025}. This application leverages the fact that event cameras do not record color or brightness information, thus contributing to privacy protection. However, brightness changes are recorded as event frequencies, making some degree of information reconstruction possible \cite{7780471,8954323,Fox_2024_WACV,9093366,Zhu2022SpikeReconstruction}. Therefore, like conventional cameras, careful consideration of privacy concerns is necessary for the use of event cameras.
 
-# Biological Observation using Event Cameras
+## Biological Observation using Event Cameras
 
 The challenges of conventional imaging technologies in biological measurements, as discussed earlier, can be addressed effectively by event cameras, which offer unique features. In recent years, applications of event cameras in the field of biology have begun to emerge, starting with cellular biology and gradually expanding into other areas.
 
 This section aims to highlight four key reasons why biologists might find event cameras appealing: 1: high-speed performance, 2: low-light capability, 3: low power consumption and efficient storage, and 4: the ability to cancel motion blur. By presenting practical examples, this section provides information that can aid in the selection and application of event cameras for biological research.
 
-## High-Speed Performance
+### High-Speed Performance
 
 Event cameras, often advertised as capable of achieving an equivalent of 10,000 fps, require careful consideration when capturing slow-moving objects. Due to the low frequency of event generation in such cases, applications like Particle Image Velocimetry (PIV) using tracer particles may encounter challenges, necessitating solutions such as the use of pulsed lasers \cite{EBIV:2022,PulsedEBIV:2023}. Therefore, if conventional high-speed cameras are available, they might be more suitable for such environments.
 
@@ -59,7 +59,7 @@ An effective example of event cameras in biological research is the analysis of 
 
 Takatsuka et al. proposed a method to analyze periodic biological movements using a two-step clustering approach similar to stream clustering. This method captures events representing the target object and performs frequency analysis to examine motion \cite{millisecond}. They defined 21 biologically relevant parameters and successfully classified zooplankton and protozoa, primarily using frequency information. Additionally, the study utilized infrared light as an observational light source to minimize the impact on marine organisms, including zooplankton. This research highlights the integration of event cameras’ high-speed capabilities with the unique requirements of observing biological phenomena in the marine environment.
 
-## Low-Light Capability
+### Low-Light Capability
 Biological measurements in darkness, such as in nocturnal forests or caves, are expected to benefit greatly from event cameras. Observing the behavior of organisms in the wild provides a unique opportunity to study their natural behavior and uncover their ecology within the natural environment. However, unlike controlled indoor experiments, field experiments face long-standing challenges such as fluctuating light levels and weather-dependent conditions, making stable, long-term observations difficult. Specifically, measuring biological behavior in darkness requires lighting with carefully controlled intensity and frequency that does not disturb the organisms, further restricting experimental setups. While infrared or thermal cameras have traditionally been used for these purposes, their time resolution is inversely related to exposure time, making it difficult to capture fine details of organismal movements.
 
 Event cameras, which can capture movement even under low-light conditions and visualize only moving objects, act as biological pass filters in nighttime field studies. For instance, in observing bats flying in darkness, moving objects are typically limited to bats and their prey, such as insects. Both need to be tracked with a high signal-to-noise (S/N) ratio. Event cameras simplify tracking in such challenging scenes, enabling automatic calculation of features such as the distance between predator and prey or flight characteristics (Figure).
@@ -70,7 +70,7 @@ Additionally, event cameras’ high dynamic range makes them advantageous for ob
 
 Another promising application lies in visualizing particles within microfluidic devices—something high-sensitivity frame cameras cannot achieve. High-speed cameras paired with powerful lighting are typically required to track fast-moving particles, significantly limiting accessibility and scope \cite{D0LC00556H}. Event cameras, with their low-light capabilities, enable the capture of fast particles without the need for intense lighting, making them an ideal tool when additional information like particle color or brightness is of lesser importance. Similarly, for microscopic observations of biological particles such as phytoplankton, zooplankton, sperm cells, or other cells, light often becomes a major constraint in behavior analysis. The low-light performance of event cameras presents a significant breakthrough for biological observations, both in field and laboratory settings.
 
-## Low Power Consumption and Efficient Storage
+### Low Power Consumption and Efficient Storage
 When the high-speed and low-light capabilities of event cameras are combined with their low power consumption and low storage requirements, their full potential is realized.
 
 One of the most compelling use cases for event cameras in biological measurement is capturing fast movements in unpredictable scenarios. Since event cameras only output data when brightness changes occur, they maintain low power and storage consumption during periods of inactivity.
@@ -79,7 +79,7 @@ For example, observing flower-visiting insects often requires long-term, fixed-p
 
 Additionally, recording neural activity in biological systems often demands cameras capable of detecting subtle changes in light intensity at sampling rates ranging from 10 Hz to 1 kHz. While high-frame-rate, low-noise CMOS sensors are commonly used for this purpose, these sensors produce large amounts of data, making them unsuitable for long-term recording. In this context, event cameras, which combine high-speed performance, low power consumption, relatively low data rates, and high dynamic range, present an ideal solution \cite{8325076}.
 
-## Cancel Motion Blur
+### Cancel Motion Blur
 
 Leveraging the sparse nature of event data is expected to make significant contributions to environmental monitoring for both industrial and academic purposes in marine settings.
 
@@ -91,7 +91,7 @@ The ocean contains particles ranging in size from micrometers to tens of meters.
 
 We are currently conducting research and development to establish observational techniques for marine particles using this approach within moored systems.
 
-# Conclusion
+## Conclusion
 Event cameras are paving the way for new observational domains that were challenging or impossible to achieve with conventional measurement technologies. For event cameras to be widely adopted in biological observation, it is crucial to establish a community-driven framework for research and development involving both manufacturers and researchers.
 
 Open-source processing software tailored to event data is essential. In traditional image processing, OpenCV has become the de facto standard. However, no equivalent package exists for event data, leaving researchers to implement their own processing algorithms. While some foundational tools, such as the Event Vision Library and neuromorphic drivers, have been developed by individual researchers \cite{eventVisionLibrary,neuromorphicDrivers}, they remain rudimentary.
