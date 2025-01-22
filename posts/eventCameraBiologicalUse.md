@@ -5,7 +5,7 @@ January-22-2025
 This article is an English translation of a review originally written for submission to an information science journal in Japanese, with assistance from ChatGPT. For further reference, please see a separate article compiling a list of studies utilizing event cameras in biological research.
 
 If you are interested in applying event cameras to biological research, feel free to reach out via the email address below.
-
+yhayashi@jamstec.go.jp
 
 ## Introduction
 When mankind makes new discoveries, they are often accompanied by advances in instrumentation. The spatio-temporal domains that we can learn about have increased through the use of measurement instruments, such as observing distant stars that cannot be seen with the human eye through telescopes and measuring sounds with wavelengths higher than ultrasonic waves that cannot be heard with the human ear through microphones.
