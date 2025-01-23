@@ -13,7 +13,7 @@ Furthermore, recent developments in machine learning technology, such as deep le
 We have used event cameras to capture images of marine life, particles, and a variety of other organisms, including bats at night. This paper details how this event camera could revolutionize the field of biological observation.
 
 ## History of the biological measurement by the imaging system  
-The history of attempts to record visual information is a long one. Early examples include humans depicting wild animals in cave paintings \cite{brumm2021oldest} and Haeckel, equipped with a microscope, producing beautiful illustrations of microscopic marine organisms \cite{bhl182319}. In the 19th century, the advent of photography greatly enhanced techniques for recording spatial information, and this development was constantly accompanied by eye-catching photographs of living creatures. In 1839, the shadow of a plant was directly recorded on photosensitive paper \cite{talbot_album_1839}, a technique dubbed “photogenic drawing.” Subsequently, this recording technology stabilized into a method that captured the light passing through a camera obscura’s lens, leading to the publication of many photographs of nature and organisms from the 19th to the 20th century. The invention of the flash in the 1890s considerably broadened the possibilities of photography. Nighttime images of white-tailed deer were captured by an automated system in which the animal itself triggered the shutter \cite{L.1906}, and in the 1920s, the light of magnesium flares enabled the first color recording of fish swimming naturally underwater \cite{longley1927life}.
+The history of attempts to record visual information is a long one. Early examples include humans depicting wild animals in cave paintings ^{13} and Haeckel, equipped with a microscope, producing beautiful illustrations of microscopic marine organisms (29). In the 19th century, the advent of photography greatly enhanced techniques for recording spatial information, and this development was constantly accompanied by eye-catching photographs of living creatures. In 1839, the shadow of a plant was directly recorded on photosensitive paper \cite{talbot_album_1839}, a technique dubbed “photogenic drawing.” Subsequently, this recording technology stabilized into a method that captured the light passing through a camera obscura’s lens, leading to the publication of many photographs of nature and organisms from the 19th to the 20th century. The invention of the flash in the 1890s considerably broadened the possibilities of photography. Nighttime images of white-tailed deer were captured by an automated system in which the animal itself triggered the shutter \cite{L.1906}, and in the 1920s, the light of magnesium flares enabled the first color recording of fish swimming naturally underwater \cite{longley1927life}.
 
 Around the same period, technology for capturing high-speed phenomena also evolved. As early as 1870, sequences of galloping horses were already being photographed by using multiple cameras, and fast mechanical shutters made it possible to record continuous motion onto a single strip of film \cite{braun1992picturing}. Stroboscopic technology, developed by Edgerton, enabled extremely short exposures that could not be achieved with mechanical shutters alone, thereby capturing even faster movements such as flying insects and bullets \cite{edgerton1939flash}. This technology significantly contributed to research on the flight of insects \cite{chadwick1939simple,reed1942frequency}. Once film became widely available, photography was popularized; it was later swept into the wave of digitalization, and by the 2000s, anyone could record high-quality photographs and videos on a personal device. Biologists now capture the instantaneous behaviors of organisms under the microscope, while ecologists carry out long-term automatic observations at remote locations through the power of sunlight and the internet \cite{Yasuda2002,swann2011evaluating}. As photographic technology has advanced, biological measurement using images has expanded from descriptive, phenomenon-based approaches to more analytical ones. Moreover, it is increasingly treated as just one among many large datasets—without relying on human interpretation—especially in fields where deep learning is employed.
 
@@ -103,3 +103,166 @@ Developing easy-to-use packages for event data processing is a critical first st
 Making such software widely accessible and usable will be indispensable for advancing the application of event cameras in biological research.
 
 By exploring the application of event cameras in extreme environments, such as deep-sea and polar regions, the use cases introduced in this paper can be expanded further. This opens up the possibility of redefining biology from a new perspective, leveraging event cameras as a transformative imaging technology.
+
+
+## Reference
+
+1）Coram AI. Choosing the best security camera system for elderly monitoring, 2025. Accessed: 2025-01-09.
+
+2）Filipp Akopyan, Jun Sawada, Andrew Cassidy, Rodrigo Alvarez-Icaza, et al. Truenorth: Design and tool flow of a 65 mw 1 million neuron programmable neurosynaptic chip. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 34(10):1537–1557, 2015.
+
+3）Yusra Alkendi, Rana Azzam, Abdulla Ayyad, Sajid Javed, et al. Neuromorphic camera denoising using graph neural network-driven transformers. IEEE Transactions on Neural Networks and Learning Systems, 35(3):4110–4124, 2024.
+
+4）Arnon Amir, Brian Taba, David Berg, Timothy Melano, et al. A low power, fully event-based gesture recognition system. In 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 7388–7397, 2017.
+
+5）Asude Aydin, Mathias Gehrig, Daniel Gehrig, Davide Scaramuzza. A hybrid ann-snn architecture for low-power and low-latency visual perception. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 5701–5711, 2024.
+
+6）Sofia Baldini, Riccardo Bernardini, Andrea Fusiello, Paolo Gardonio, et al. Measuring vibrations with event cameras. The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLVIII-2/W7-2024:9–16, 2024.
+
+7）Thomas Barbier, Céline Teulière, Jochen Triesch. Spike timing-based unsupervised learning of orientation, disparity, and motion representations in a spiking neural network. In 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), pages 1377–1386, 2021.
+
+8）Patrick Bardow, Andrew J. Davison, Stefan Leutenegger. Simultaneous optical flow and intensity estimation from an event camera. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 884–892, 2016.
+
+9）Xiuwen Bi, Pengfei Wang, Wei Guo, Fusheng Zha, et al. RGB/event signal fusion framework for multi-degraded underwater image enhancement. Frontiers in Marine Science, 11:1366815, 2024.
+
+10）Yin Bi, Aaron Chadha, Alhabib Abbas, Eirina Bourtsoulatze, Yiannis Andreopoulos. Graph-based object classification for neuromorphic vision sensing. In 2019 IEEE/CVF International Conference on Computer Vision (ICCV), pages 491–501, 2019.
+
+11）G. Bradski. The opencv library. Dr. Dobb’s Journal of Software Tools, 2000.
+
+12）Marta Braun. Picturing time: the work of Etienne-Jules Marey (1830-1904). University of Chicago Press, 1992.
+
+13）Adam Brumm, Adhi Agus Oktaviana, Basran Burhan, Budianto Hakim, et al. Oldest cave art found in Sulawesi. Science Advances, 7(3):eabd4648, 2021.
+
+14）Luis A Camuñas-Mesa, Bernabé Linares-Barranco, and Teresa Serrano-Gotarredona. Low-power hardware implementation of SNN with decision block for recognition tasks. In 2019 26th IEEE International Conference on Electronics, Circuits and Systems (ICECS), pages 73–76, 2019.
+
+15）Leigh E Chadwick. A simple stroboscopic method for the study of insect flight. Psyche: A Journal of Entomology, 46(1):1–8, 1939.
+
+16）Bharatesh Chakravarthi, Aayush Atul Verma, Kostas Daniilidis, Cornelia Fermuller, and Yezhou Yang. Recent event camera innovations: A survey. arXiv preprint arXiv:2408.13627, 2024.
+
+17）Subimal Bikash Chaudhury, Mainak Sengupta, and Kaushik Mukherjee. Vibration monitoring of rotating machines using MEMS accelerometer. International journal of scientific engineering and research, 2(9):5–11, 2014.
+
+18）Loïc Cordone, Benoît Miramond, and Philippe Thierion. Object detection with spiking neural networks on automotive event data. In 2022 International Joint Conference on Neural Networks (IJCNN), pages 1–8, 2022.
+
+19）Mike Davies, Narayan Srinivasa, Tsung-Han Lin, Gautham Chinya, et al. Loihi: A neuromorphic manycore processor with on-chip learning. IEEE Micro, 38(1):82–99, 2018.
+
+20）Abe Davis, Michael Rubinstein, Neal Wadhwa, Gautham J. Mysore, et al. The visual microphone: passive recovery of sound from video. ACM Transactions on Graphics, 33(4), 2014.
+
+21）Yongjian Deng, Hao Chen, Hai Liu, and Youfu Li. A voxel graph CNN for object classification with event cameras. In 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 1162–1171, 2022.
+
+22）Harold Eugene Edgerton and James Rhyne Killian. Flash! Seeing the Unseen by Ultra High-Speed Photography. Hale, Cushman & Flint, Boston, 1939.
+
+23）Gereon Fox, Xingang Pan, Ayush Tewari, Mohamed Elgharib, and Christian Theobalt. Unsupervised event-based video reconstruction. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), pages 4179–4188, January 2024.
+
+24）Guillermo Gallego, Tobi Delbrück, Garrick Orchard, Chiara Bartolozzi, et al. Event-based vision: A survey. IEEE transactions on pattern analysis and machine intelligence, 44(1):154–180, 2020.
+
+25）Eike Gebauer, Sebastian Thiele, Pierre Ouvrard, Adrien Sicard, and Benjamin Risse. Towards a dynamic vision sensor-based insect camera trap. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, pages 7157–7166, 2024.
+
+26）Daniel Gehrig and Davide Scaramuzza. Pushing the limits of asynchronous graph-based object detection with event cameras. ArXiv, abs/2211.12324, 2022.
+
+27）Daniel Gehrig and Davide Scaramuzza. Low-latency automotive vision with event cameras. Nature, 629(8014):1034–1040, 2024.
+
+28）Julie Grollier, Damien Querlioz, KY Camsari, Karin Everschor-Sitte, et al. Neuromorphic spintronics. Nature electronics, 3(7):360–370, 2020.
+
+29）Ernst Haeckel and Bibliographisches Institut Leipzig. Kunstformen der Natur. Leipzig und Wien, Verlag des Bibliographischen Instituts, 1899–1904.
+
+30）Friedhelm Hamann, Suman Ghosh, Ignacio Juárez Martínez, Tom Hart, Alex Kacelnik, and Guillermo Gallego. Fourier-based action recognition for wildlife behavior quantification with event cameras. Advanced Intelligent Systems, page 2400353, 2024.
+
+31）Friedhelm Hamann, Suman Ghosh, Ignacio Juárez Martínez, Tom Hart, Alex Kacelnik, and Guillermo Gallego. Low-power, continuous remote behavioral localization with event cameras. In 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 18612–18621, 2024.
+
+32）Friedhelm Hamann, Hanxiong Li, Paul Mieske, Lars Lewejohann, et al. Mousesis: A frames-and-events dataset for space-time instance segmentation of mice. arXiv preprint arXiv:2409.03358, 2024.
+
+33）Jessie Howell, Tansy C. Hammarton, Yoann Altmann, and Melanie Jimenez. High-speed particle detection and tracking in microfluidic devices using event-based sensing. Lab Chip, 20:3024–3035, 2020.
+
+34）Khadija Iddrisu, Waseem Shariff, Peter Corcoran, Noel E. O’Connor, et al. Event camera-based eye motion analysis: A survey. IEEE Access, 12:136783–136804, 2024.
+
+35）Daniel Joska, Liam Clark, Naoya Muramatsu, Ricardo Jericevich, Fred Nicolls, et al. Acinoset: A 3D pose estimation dataset and baseline models for cheetahs in the wild, 2021.
+
+36）Jacques Kaiser, J. Camilo Vasquez Tieck, Christian Hübschneider, Peter Wolf, Michael Weber, et al. Towards a framework for end-to-end control of a simulated vehicle with spiking neural networks. In 2016 IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR), pages 127–134, 2016.
+
+37）Jürgen Kogler, Christoph Sulzbachner, Wilfried Kubinger. Bio-inspired stereo vision system with silicon retina imagers. In International Conference on Computer Vision Systems, pages 174–183. Springer, 2009.
+
+38）Raphaela Kreiser, Alpha Renner, Vanessa RC Leite, Baris Serhan, et al. An on-chip spiking neural network for estimation of the head pose of the iCub robot. Frontiers in Neuroscience, 14:551, 2020.
+
+39）R. L. Flashlight photographs of wild animals. Nature, 74(1924):489–490, Sep 1906.
+
+40）Yijin Li, Han Zhou, Bangbang Yang, Ye Zhang, Zhaopeng Cui, et al. Graph-based asynchronous event processing for rapid object recognition. In 2021 IEEE/CVF International Conference on Computer Vision (ICCV), pages 914–923, 2021.
+
+41）W. H. Longley. Life on a Coral Reef: The Fertility and Mystery of the Sea Studied Beneath the Waters Surrounding Dry Tortugas, volume 51. National Geographic Society, 1927.
+
+42）Alexander Mathis, Pranav Mamidanna, Kevin M. Cury, Taiga Abe, et al. Deeplabcut: Markerless pose estimation of user-defined body parts with deep learning. Nature Neuroscience, 2018.
+
+43）Mohamad Hazwan Mohd Ghazali and Wan Rahiman. Vibration analysis for machine monitoring and diagnosis: A systematic review. Shock and Vibration, 2021(1):9469318, 2021.
+
+44）Woong-jae Na, Kyung Ho Sun, Byeong Chan Jeon, Jaeyun Lee, et al. Event-based micro vibration measurement using phase correlation template matching with event filter optimization. Measurement, 215:112867, 2023.
+
+45）Mihoko Nagai, Yohei Higuchi, Yusei Ishikawa, Wei Guo, Tokihiro Fukatsu, et al. Periodically taken photographs reveal the effect of pollinator insects on seed set in lotus flowers. Scientific Reports, 12(1):11051, 2022.
+
+46）Tanmay Nath, Alexander Mathis, An Chi Chen, Amir Patel, et al. Using Deeplabcut for 3D markerless pose estimation across species and behaviors. Nature protocols, 14(7):2152–2176, 2019.
+
+47）Ryogo Niwa, Tatsuki Fushimi, Kenta Yamamoto, Yoichi Ochiai. Live demonstration: Event-based visual microphone. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, pages 4054–4055, June 2023.
+
+48）Garrick Orchard, Ryad Benosman, Ralph Etienne-Cummings, Nitish V. Thakor. A spiking neural network architecture for visual motion estimation. In 2013 IEEE Biomedical Circuits and Systems Conference (BioCAS), pages 298–301, 2013.
+
+49）Marc Osswald, Sio-Hoi Ieng, Ryad Benosman, and Giacomo Indiveri. A spiking neural network model of 3D perception for event-based neuromorphic stereo vision systems. Scientific Reports, 7(1):40703, 2017.
+
+50）Chethan M. Parameshwara, Simin Li, Cornelia Fermüller, Nitin J. Sanket, Matthew S. Evanusa, and Yiannis Aloimonos. Spikems: Deep spiking neural network for motion segmentation. In 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 3414–3420, 2021.
+
+51）Robert Bond Randall. Vibration-based condition monitoring: Industrial, automotive and aerospace applications. John Wiley & Sons, 2021.
+
+52）Sheldon C. Reed, C.M. Williams, and Leigh E. Chadwick. Frequency of wing-beat as a character for separating species races and geographic varieties of drosophila. Genetics, 27(3):349, 1942.
+
+53）Simon Schaefer, Daniel Gehrig, and Davide Scaramuzza. Aegnn: Asynchronous event-based graph neural networks. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 12371–12381, 2022.
+
+54）Cedric Scheerlinck, Henri Rebecq, Daniel Gehrig, Nick Barnes, et al. Fast image reconstruction with an event camera. In 2020 IEEE Winter Conference on Applications of Computer Vision (WACV), pages 156–163, 2020.
+
+55）Johannes Schindelin, Ignacio Arganda-Carreras, Erwin Frise, Verena Kaynig, et al. Fiji: An open-source platform for biological-image analysis. Nature Methods, 9(7):676–682, 2012.
+
+56）Caroline A. Schneider, Wayne S. Rasband, and Kevin W. Eliceiri. NIH Image to ImageJ: 25 years of image analysis. Nature Methods, 9(7):671–675, 2012.
+
+57）Waseem Shariff, Mehdi Sefidgar Dilmaghani, Paul Kielty, Mohamed Moustafa, et al. Event cameras in automotive sensing: A review. IEEE Access, 12:51275–51306, 2024.
+
+58）Chenyang Shi, Ningfang Song, Boyi Wei, Yuzhen Li, et al. Event-based vibration frequency measurement with laser-assisted illumination based on mixture Gaussian distribution. IEEE Transactions on Instrumentation and Measurement, 72:1–13, 2023.
+
+59）Shintaro Shiba. Event Vision Library, 2023. Accessed: 2025-01-22.
+
+60）Ryo Shirakawa, Yoko Sogabe, Shiori Sugimoto, Ayumi Matsumoto, et al. High-resolution optical sound measurement based on vibration analysis with event camera. In Proceedings of the 22nd Forum on Information Technology (FIT), volume 3, pages 35–38, 2023.
+
+61）Rasmus Stagsted, Antonio Vitale, Jonas Binz, Leon Bonde Larsen, et al. Towards neuromorphic control: A spiking neural network based PID controller for UAV. RSS, 2020.
+
+62）J.D.B. Stillman, Eadweard Muybridge, and Leland Stanford. The Horse in Motion: As Shown by Instantaneous Photography; with a Study on Animal Mechanics Founded on Anatomy and the Revelations of the Camera; in Which is Demonstrated the Theory of Quadrupedal Locomotion. James R. Osgood and Company, Boston, 1882.
+
+63）Evangelos Stromatias, Miguel Soto, Teresa Serrano-Gotarredona, Bernabé Linares-Barranco. An event-driven classifier for spiking neural networks fed with synthetic or dynamic vision sensor data. Frontiers in Neuroscience, 11:350, 2017.
+
+64）Don E. Swann, Kae Kawanishi, and Jonathan Palmer. Evaluating types and features of camera traps in ecological studies: A guide for researchers. Camera Traps in Animal Ecology: Methods and Analyses, pages 27–43, 2011.
+
+65）Neuromorphic Systems. Neuromorphic drivers, 2023. Accessed: 2025-01-22.
+
+66）Susumu Takatsuka, Norio Miyamoto, Hidehito Sato, Yoshiaki Morino, et al. Millisecond-scale behaviours of plankton quantified in vitro and in situ using the event-based vision sensor. Ecology and Evolution, 14(8):e70150, 2024.
+
+67）William Henry Fox Talbot. Album di disegni fotogenici. 1839. Collection of 36 salted paper prints.
+
+68）Gemma Taverni, Diederik Paul Moeys, Fabian Friedrich Voigt, Chenghan Li, et al. In-vivo imaging of neural activity with dynamic vision sensors. In 2017 IEEE Biomedical Circuits and Systems Conference (BioCAS), pages 1–4, 2017.
+
+69）Albert Van Helden. The invention of the telescope. Transactions of the American Philosophical Society, 67(4):1–67, 1977.
+
+70）Anup Vanarse, Adam Osseiran, Alexander Rassau, and Peter van der Made. A hardware-deployable neuromorphic solution for encoding and classification of electronic nose data. Sensors, 19(22), 2019.
+
+71）Lin Wang, I.S. Mohammad Mostafavi, Yo-Sung Ho, and Kuk-Jin Yoon. Event-based high dynamic range image and very high frame rate video generation using conditional generative adversarial networks. In 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 10073–10082, 2019.
+
+72）Christian Willert. Event-based imaging velocimetry using pulsed illumination. Exp. Fluids, 64:98, 2023.
+
+73）Christian Willert and Joachim Klinner. Event-based imaging velocimetry: An assessment of event-based cameras for the measurement of fluid flows. Exp. Fluids, 63:101, 2022.
+
+74）Man Yao, Huanhuan Gao, Guangshe Zhao, Dingheng Wang, et al. Temporal-wise attention spiking neural networks for event streams classification. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 10221–10230, 2021.
+
+75）Masatoshi Yasuda and Kazuto Kawakami. New method of monitoring remote wildlife via the internet. Ecological Research, 17(1):119–124, 2002.
+
+76）Rongyu Zhang, Yulin Luo, Jiaming Liu, Huanrui Yang, et al. Efficient deweather mixture-of-experts with uncertainty-aware feature-wise linear modulation. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 38, pages 16812–16820, 2024.
+
+77）Lin Zhu, Xiao Wang, Yi Chang, Jianing Li, et al. Event-based video reconstruction via potential-assisted spiking neural network. In 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 3584–3594, 2022.
+
+78）Rong Zou, Manasi Muglikar, Nico Messikommer, and Davide Scaramuzza. Seeing behind dynamic occlusions with event cameras. arXiv preprint arXiv:2307.15829, 2023.
+
+79）竹村嘉夫 and 豊田芳州. 自然写真50年史: ネイチャーフォト1500冊の歩み. 文一総合出版, 1995.
+
+80）渡辺伸一, 野田琢嗣, 小泉拓也, 依田憲, et al. Biologging intelligent platform (BIP) により実現するバイオロギングデータの共有と海洋の可視化. 日本生態学会誌, 73(1):9–22, 2023.
