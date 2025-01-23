@@ -29,15 +29,15 @@ Measurements in low-light conditions are typically achieved using strobe lights,
 
 ## What is Event Camera?
 
-![eventCameraPros](posts/pics/review/eventCamera.jpeg "eventCameraPros")
-Figure 3: The good point of using Event camera
-
 Event cameras are a type of neuromorphic device that record the spatio-temporal information of light. They are different from conventional cameras in that they record only the changes in light intensity, not the entire image. Each pixel in the sensor independently determines whether to output data, and the output is transferred as a continuous, unsynchronized stream. If the brightnesschange is positive, it is assigned a positive polarity; if negative, it is assigned a negative polarity. This means that the data recorded by event cameras is not a single image, but a series of events that occur at specific times and locations.
 The brightness change, referred to as an “event,” is represented as a time-series dataset consisting of four values: coordinates x, y, polarity, and timestamp. This structure is sparse and unsynchronized, unlike conventional frame-based data. Because synchronization across all pixels is not required, individual pixels can output data continuously at an equivalent rate of 10,000 fps. Furthermore, since data from static objects without brightness changes is not recorded, the camera is highly efficient in terms of power consumption and memory usage.
 
 A notable characteristic of event cameras is their high dynamic range. Incident light is first converted into current by photodiodes and then into voltage. During this process, logarithmic compression is applied, enabling the output of events even with small brightness changes under low-light conditions. This capability allows the camera to capture events effectively regardless of temporal and spatial changes in both high-illumination and low-illumination environments.
 
-Nevertheless, event cameras uniquely combine low-light performance and high-speed capabilities while minimizing resource usage such as power and storage. As a result, research utilizing event cameras is rapidly increasing (16,24,34). In the field of biology, their application is still in its early stages, much like other technologies that have emerged in the past (Figure 1).
+![eventCameraPros](posts/pics/review/eventCamera.jpeg "eventCameraPros")
+Figure 3: The good point of using Event camera
+
+Nevertheless, event cameras uniquely combine low-light performance and high-speed capabilities while minimizing resource usage such as power and storage. As a result, research utilizing event cameras is rapidly increasing (16,24,34). In the field of biology, their application is still in its early stages, much like other technologies that have emerged in the past (Figure 2).
 
 ## Current Utilization of Event Cameras and Applications in industrial fields
 
