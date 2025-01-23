@@ -2,9 +2,12 @@
 January-22-2025
 
 ---
-This article is an English translation of a review originally written for submission to an information science journal in Japanese, with assistance from ChatGPT. For further reference, please see a separate article compiling a list of studies utilizing event cameras in biological research.
+This article is an English translation of a review originally written for submission to an information science journal in Japanese, with assistance from ChatGPT. For further reference, please see a google sheets compiling a list of studies utilizing event cameras in biological fields.
+
+https://docs.google.com/spreadsheets/d/1lRiUqsarrZ-K3AOEgryv6VIb1pxsCQUaaBPE_TAsA-U/edit?usp=sharing
 
 If you are interested in applying event cameras to biological research, feel free to reach out via the email address below.
+
 yhayashi@jamstec.go.jp
 
 ## Introduction
@@ -13,7 +16,7 @@ Furthermore, recent developments in machine learning technology, such as deep le
 We have used event cameras to capture images of marine life, particles, and a variety of other organisms, including bats at night. This paper details how this event camera could revolutionize the field of biological observation.
 
 ![papers](posts/pics/review/papers.jpeg "papers")
-Figure 1: Trends in Event Camera Research Publications, Including Applications in Biological Fields (Orange).
+Figure 2: Trends in Event Camera Research Publications, Including Applications in Biological Fields (Orange).
 
 ## History of the biological measurement by the imaging system  
 The history of attempts to record visual information is a long one. Early examples include humans depicting wild animals in cave paintings (13) and Haeckel, equipped with a microscope, producing beautiful illustrations of microscopic marine organisms (29). In the 19th century, the advent of photography greatly enhanced techniques for recording spatial information, and this development was constantly accompanied by eye-catching photographs of living creatures. In 1839, the shadow of a plant was directly recorded on photosensitive paper (67), a technique dubbed “photogenic drawing.” Subsequently, this recording technology stabilized into a method that captured the light passing through a camera obscura’s lens, leading to the publication of many photographs of nature and organisms from the 19th to the 20th century. The invention of the flash in the 1890s considerably broadened the possibilities of photography. Nighttime images of white-tailed deer were captured by an automated system in which the animal itself triggered the shutter (39), and in the 1920s, the light of magnesium flares enabled the first color recording of fish swimming naturally underwater (41).
@@ -25,6 +28,10 @@ In this era, we must once again reconsider the “limitations of biological rese
 Measurements in low-light conditions are typically achieved using strobe lights, infrared imaging, or specially designed high-sensitivity cameras, while high-speed objects are captured using high-speed cameras. However, when it comes to “measuring high-speed motion occurring in low-light conditions,” the difficulty rises significantly. Moreover, maintaining a stable power supply in extreme environments such as oceans, mountains, or forests further complicates measurements using existing technologies.
 
 ## What is Event Camera?
+
+![eventCameraPros](posts/pics/review/eventCamera.jpeg "eventCameraPros")
+Figure 3: The good point of using Event camera
+
 Event cameras are a type of neuromorphic device that record the spatio-temporal information of light. They are different from conventional cameras in that they record only the changes in light intensity, not the entire image. Each pixel in the sensor independently determines whether to output data, and the output is transferred as a continuous, unsynchronized stream. If the brightnesschange is positive, it is assigned a positive polarity; if negative, it is assigned a negative polarity. This means that the data recorded by event cameras is not a single image, but a series of events that occur at specific times and locations.
 The brightness change, referred to as an “event,” is represented as a time-series dataset consisting of four values: coordinates x, y, polarity, and timestamp. This structure is sparse and unsynchronized, unlike conventional frame-based data. Because synchronization across all pixels is not required, individual pixels can output data continuously at an equivalent rate of 10,000 fps. Furthermore, since data from static objects without brightness changes is not recorded, the camera is highly efficient in terms of power consumption and memory usage.
 
