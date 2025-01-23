@@ -101,6 +101,9 @@ The ocean contains particles ranging in size from micrometers to tens of meters.
 
 We are currently conducting research and development to establish observational techniques for marine particles using this approach within moored systems.
 
+![evsMarineSnow](posts/pics/review/evsMarineSnow.jpeg "evsMarineSnow")
+Figure : Figure: Visualization of Results from evsMarineSnow
+
 ## Conclusion
 Event cameras are paving the way for new observational domains that were challenging or impossible to achieve with conventional measurement technologies. For event cameras to be widely adopted in biological observation, it is crucial to establish a community-driven framework for research and development involving both manufacturers and researchers.
 
