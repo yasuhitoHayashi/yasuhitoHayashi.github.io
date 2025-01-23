@@ -8,8 +8,6 @@ https://docs.google.com/spreadsheets/d/1lRiUqsarrZ-K3AOEgryv6VIb1pxsCQUaaBPE_TAs
 
 If you are interested in applying event cameras to biological research, feel free to reach out via the email address below.
 
-yhayashi@jamstec.go.jp
-
 ## Introduction
 When mankind makes new discoveries, they are often accompanied by advances in instrumentation. The spatio-temporal domains that we can learn about have increased through the use of measurement instruments, such as observing distant stars that cannot be seen with the human eye through telescopes and measuring sounds with wavelengths higher than ultrasonic waves that cannot be heard with the human ear through microphones.
 Furthermore, recent developments in machine learning technology, such as deep learning, have not only expanded the spatio-temporal space that can be measured, but have also made it possible for machines to perform tasks such as classification and segmentation without our interpretation (visualization) of the measured data. This evolution in a different direction has led to an increased focus on sensors that have been difficult to utilize with conventional technologies. Event cameras have attracted particular attention in recent years. Event cameras are one type of neuromorphic device based on information transmission by nerves. It has a completely different data format and representation from existing frame-based cameras, and can coexist with temporal resolution and dark performance that are unattainable with conventional frame-based technologies. On the other hand, there are limitations that must be understood by the measurer.
