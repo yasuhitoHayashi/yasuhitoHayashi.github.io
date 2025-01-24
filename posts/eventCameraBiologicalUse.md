@@ -6,7 +6,6 @@ This article is an English translation of a review originally written for submis
 
 https://docs.google.com/spreadsheets/d/1lRiUqsarrZ-K3AOEgryv6VIb1pxsCQUaaBPE_TAsA-U/edit?usp=sharing
 
-If you are interested in applying event cameras to biological research, feel free to reach out via the email address below.
 
 ## Introduction
 When mankind makes new discoveries, they are often accompanied by advances in instrumentation. The spatio-temporal domains that we can learn about have increased through the use of measurement instruments, such as observing distant stars that cannot be seen with the human eye through telescopes and measuring sounds with wavelengths higher than ultrasonic waves that cannot be heard with the human ear through microphones.
