@@ -2,7 +2,7 @@
 January-22-2025
 
 ---
-This article is an English translation of a review originally written for submission to an information science journal in Japanese, with assistance from ChatGPT. For further reference, please see a google sheets compiling a list of studies utilizing event cameras in biological fields.
+This article is an English translation of a review written in Japanese for a Journal of the Society of Instrument and Control Engineers, with assistance from ChatGPT. For further reference, please see a google sheets compiling a list of studies utilizing event cameras in biological fields.
 
 https://docs.google.com/spreadsheets/d/1lRiUqsarrZ-K3AOEgryv6VIb1pxsCQUaaBPE_TAsA-U/edit?usp=sharing
 
