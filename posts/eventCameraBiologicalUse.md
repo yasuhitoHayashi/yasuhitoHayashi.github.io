@@ -1,4 +1,4 @@
-# Biological-Ecological Research using Event Camera
+# Event-based biological research: Review
 January-22-2025
 
 ---
