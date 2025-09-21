@@ -18,6 +18,7 @@
     display: flex;
     justify-content: flex-end; /* 右寄せにする */
     align-items: center;
+    gap: 4px;
 }
 
 /* Yasuhito Hayashiリンクのスタイル */
@@ -27,7 +28,7 @@
 
 /* 他のメニュー項目のスペースを調整 */
 .navbar ul li:not(:first-child) {
-    margin-left: 5px; /* 他のリンク間のスペースを狭くする */
+    margin-left: 0;
 }
 
 /* 各リンクのスタイル */
@@ -54,6 +55,32 @@ body {
     background-color: #fffdfc; /* 全ページにくすんだ青色の背景を適用 */
 }
 
+.no-js-notice {
+    display: block;
+    background-color: #ffe9c7;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 16px;
+}
+
 
 h2 {
     margin-top: 50px; /* 各セクションのタイトルの余白 */
@@ -61,7 +88,7 @@ h2 {
 
 
 .container {
-    width: 70%;
+    width: min(90%, 960px);
     margin: 0 auto; /* 中央に配置 */
 }
 
@@ -78,6 +105,20 @@ section {
 .profile {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.research-focus {
+    margin-bottom: 50px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.research-focus p {
+    margin-top: 1em;
+}
+
+.research-focus p:first-of-type {
+    margin-top: 0.5em;
 }
 
 .profile-picture {
@@ -220,6 +261,29 @@ h2 {
     color: #333;
 }
 
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-list li {
+    display: grid;
+    grid-template-columns: minmax(90px, 120px) 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: baseline;
+}
+
+.news-list time {
+    font-weight: 600;
+    color: #333;
+}
+
+.news-list a {
+    color: #005a8d;
+}
+
 .presentations ol li, .grants ol li {
     margin-bottom: 10px;
     text-align: left;
@@ -237,12 +301,20 @@ h2 {
 /* ハンバーガーメニューのスタイル */
 .hamburger-menu {
     display: none; /* デフォルトで非表示 */
+    border: none;
+    background: transparent;
     font-size: 24px;
     cursor: pointer;
     color: #666;
     position: absolute;
     right: 20px;
     top: 15px;
+    padding: 4px 8px;
+}
+
+.hamburger-menu:focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 2px;
 }
 
 /* メディアクエリ：幅が768px以下の時にハンバーガーメニューを表示 */
@@ -286,6 +358,15 @@ h2 {
         width: 100%;
         padding: 0 10px; /* セクション全体に余白を追加 */
         box-sizing: border-box;
+    }
+
+    .news-list li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .news-list time {
+        font-weight: 600;
     }
 
     .site-footer {
