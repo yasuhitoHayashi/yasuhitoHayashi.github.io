@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-791LS3LC9K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-791LS3LC9K');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ記事 | Yasuhito Hayashi</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <script defer src="blogPost.js"></script>
-    <script>
-        function toggleMenu() {
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.classList.toggle('show');
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuLinks = document.querySelectorAll('.menu-item a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    document.querySelectorAll('.menu-item').forEach(item => {
-                        item.classList.remove('show'); // メニューを閉じる
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="scripts/main.js" defer></script>
+    <script src="blogPost.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-        <nav class="navbar">
-            <ul>
+        <nav class="navbar" aria-label="Primary navigation">
+            <ul id="primary-navigation">
                 <li><a href="index.html">Yasuhito Hayashi</a></li>
+                <li class="menu-item"><a href="index.html#news">News</a></li>
                 <li class="menu-item"><a href="index.html#publications">Publications</a></li>
                 <li class="menu-item"><a href="index.html#grants">Grants</a></li>
                 <li class="menu-item"><a href="links.html">Links</a></li>
-                <li class="menu-item"><a href="blog.html">BLOG</a></li>
+                <li class="menu-item"><a href="blog.html">Blog</a></li>
             </ul>
             <!-- ハンバーガーメニューアイコン -->
-            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <button class="hamburger-menu" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
         </nav>
     </header>
 
-    <div class="container">
-        <section id="blog-post-content" class="blog-post-detail"></section>
-    </div>
+    <main id="main-content">
+        <div class="container">
+            <article id="blog-post-content" class="blog-post-detail"></article>
+        </div>
+    </main>
 
     <footer class="site-footer">
         <a href="blog.html">← Back to Posts List</a>
-        <p>© 2024 Yasuhito Hayashi</p>
+        <p>© Yasuhito Hayashi</p>
     </footer>
 </body>
 </html>

@@ -29,30 +29,37 @@ function initNavigation() {
 const dataEndpoints = {
   research: {
     url: 'data/research.json',
+    targetId: 'research-content',
     render: renderResearch
   },
   news: {
     url: 'data/news.json',
+    targetId: 'news-list',
     render: renderNews
   },
   presentations: {
     url: 'data/presentations.json',
+    targetId: 'presentations-list',
     render: data => renderList('presentations-list', data)
   },
   talks: {
     url: 'data/talks.json',
+    targetId: 'talks-list',
     render: data => renderList('talks-list', data)
   },
   grants: {
     url: 'data/grants.json',
+    targetId: 'grants-list',
     render: data => renderList('grants-list', data)
   },
   rewards: {
     url: 'data/rewards.json',
+    targetId: 'rewards-list',
     render: data => renderList('rewards-list', data)
   },
   career: {
     url: 'data/career.json',
+    targetId: 'career-list',
     render: data => renderList('career-list', data)
   }
 };
@@ -140,8 +147,12 @@ function renderList(elementId, items) {
 }
 
 async function loadData() {
-  const loaders = Object.values(dataEndpoints).map(async ({ url, render }) => {
+  const loaders = Object.values(dataEndpoints).map(async ({ url, targetId, render }) => {
     try {
+      // 対象要素がないページ (blogなど) では読み込まない
+      if (targetId && !document.getElementById(targetId)) {
+        return;
+      }
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Failed to load ${url}: ${response.status}`);

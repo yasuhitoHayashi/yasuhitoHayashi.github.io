@@ -397,22 +397,27 @@ h2 {
     width: 100%;
 }
 
+/* ブログ一覧カード */
 .blog-summary {
     display: flex;
     align-items: flex-start;
-    /*border-bottom: 1px solid #ccc;*/
-    padding: 15px 20px; /* パディングを少し調整 */
-    flex-wrap: nowrap;
-    background-color: #f5f5f5; /* くすんだ青色の背景 */
-    border-radius: 8px; /* 角を少し丸める */
-    margin-bottom: 15px; /* ブログ記事間のスペースを確保 */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f7f7f5;
+    border: 1px solid #e5e5e2;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.blog-summary:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .thumbnail-container {
     flex-shrink: 0;
-    max-width: 150px; /* 必要であればここを変更 */
-    width: auto; /* 幅を固定せず自動で決める */
-    margin-right: 15px;
+    max-width: 150px;
 }
 
 .thumbnail-original {
@@ -422,25 +427,56 @@ h2 {
     border-radius: 8px;
 }
 
-.blog-summary {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
+.content-container {
+    min-width: 0; /* flex内での折り返しを保証 */
 }
 
 .content-container h2 {
-    margin-top: 0;
+    margin: 0 0 4px;
+    font-size: 1.25em;
+    line-height: 1.4;
+}
+
+.post-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-title-link:hover {
+    text-decoration: underline;
 }
 
 .blog-date {
+    display: block;
     color: #888;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+}
+
+.blog-excerpt {
+    margin: 0 0 10px;
 }
 
 .read-more {
+    display: inline-block;
     color: #007bff;
     text-decoration: none;
+    font-size: 0.9em;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* モバイルでは縦積みに */
+@media (max-width: 600px) {
+    .blog-summary {
+        flex-direction: column;
+    }
+
+    .thumbnail-container {
+        max-width: 100%;
+    }
 }
 
 /* コードブロックのスタイル */
@@ -460,16 +496,31 @@ pre {
     margin: 15px 0; /* 上下に余白を追加 */
 }
 
-/* ブログの段落のスタイル */
+/* 記事ページのスタイル */
+.blog-post-detail {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
 .blog-post-detail p {
-    line-height: 1.6; /* 行間を広げる */
-    margin: 1.5em 0; /* 段落の上下に余白を追加 */
+    line-height: 1.8;
+    margin: 1.5em 0;
+}
+
+.post-header {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e5e5e2;
+}
+
+.post-header h1 {
+    margin: 0 0 6px;
+    line-height: 1.4;
 }
 
 /* 記事の要約部分のスタイル */
 .blog-summary p {
-    line-height: 1.6; /* 行間を広げる */
-    margin: 1.2em 0; /* 段落の上下に余白を追加 */
+    line-height: 1.6;
 }
 
 /* ブログ内の画像スタイル */
@@ -482,8 +533,7 @@ pre {
 }
 
 /* ハイライト記事のスタイル */
-.highlight {
-    background-color: #ffd7d7; /* 少しくすんだ青色 */
-    border-radius: 8px;
-    padding: 10px;
+.blog-summary.highlight {
+    background-color: #fdeaea;
+    border-color: #f3c9c9;
 }

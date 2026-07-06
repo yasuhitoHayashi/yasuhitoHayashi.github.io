@@ -1,19 +1,122 @@
 [
-    {"url": "posts/post0.md"},
-    {"url": "posts/post1.md"},
-    {"url": "posts/KM24-06C.md"},
-    {"url": "posts/KS24-16.md"},
-    {"url": "posts/post4.md"},
-    {"url": "posts/post5.md"},
-    {"url": "posts/miyazu_1.md"},
-    {"url": "posts/osaka_PIV.md"},
-    {"url": "posts/biwako.md"},
-    {"url": "posts/toyama.md"},
-    {"url": "posts/eventNoiseFilter.md"},
-    {"url": "posts/eventCameraBiologicalUse.md"},
-    {"url": "posts/hirosaki_Nishino.md"},
-    {"url": "posts/MBARI_HBOI.md"},
-    {"url": "posts/sound.md"},
-    {"url": "posts/photos.md"},
-    {"url": "posts/nikki.md"}
+  {
+    "url": "posts/photos.md",
+    "title": "写真の真実性",
+    "dateISO": "2025-09-14",
+    "excerpt": "先日、深海に行ってきた。日本海の3000mを超える深海底には、イソギンチャクの白い触手と巻き上がった粒子が揺れるだけで、ひどく殺風景な空間が広がっていた。僕は粒子を見られた興奮で充実していたが、生物好きには耐えられない光景かもしれない。その何もない空間を、フィルムカメラで撮影した…",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/sound.md",
+    "title": "音響グループへ異動しました",
+    "dateISO": "2025-04-01",
+    "excerpt": "臨時研究補助員から特任研究員になり、音響グループへ異動しました。 これまでの研究に並行して、イベントカメラを用いた生物音研究を実施していきます。",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/MBARI_HBOI.md",
+    "title": "MBARI & HBOIでのEVS紹介",
+    "dateISO": "2025-02-01",
+    "excerpt": "イベントカメラの紹介と今後の研究の相談のため、MBARIとHBOIに伺いました。",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/eventCameraBiologicalUse.md",
+    "title": "Event-based biological research: Review",
+    "dateISO": "2025-01-22",
+    "excerpt": "This article is an English translation of a review written in Japanese for a Journal of the Society of Instrument and Control Engineers, wit…",
+    "image": "posts/pics/review/papers.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/eventNoiseFilter.md",
+    "title": "Announcing eventNoiseFilter – A Tool for Event-Based Camera Data Denoising",
+    "dateISO": "2025-01-11",
+    "excerpt": "View on GitHub",
+    "image": "posts/pics/eventNoiseFilter/inputAndOutput.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/hirosaki_Nishino.md",
+    "title": "弘前大学",
+    "dateISO": "2024-12-09",
+    "excerpt": "弘前大学 西野教授のラボに伺いました。",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/post1.md",
+    "title": "How to Compile OpenEB v5.0.0 on M1 mac envirionment",
+    "dateISO": "2024-10-10",
+    "excerpt": "In October 2024, PROPHESEE published an updated version of the Metavision SDK with Open Modules. Here, I outline the steps to compile OpenEB…",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/toyama.md",
+    "title": "富山大学医学部",
+    "dateISO": "2024-09-11",
+    "excerpt": "富山大学医学部 長谷 一磨助教のラボに伺いました。",
+    "image": "posts/pics/toyama.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/KS24-16.md",
+    "title": "RV Shinsei Maru KS24-16 Voyage",
+    "dateISO": "2024-08-28",
+    "excerpt": "I participated in the KS24-16 expedition. 新青丸KS24-16航海に参加しました。",
+    "image": "posts/pics/KS24-16.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/osaka_PIV.md",
+    "title": "大阪公立大学_回流水槽",
+    "dateISO": "2024-08-16",
+    "excerpt": "大阪公立大学 高田 洋吾教授のラボに伺いました。",
+    "image": null,
+    "highlighted": false
+  },
+  {
+    "url": "posts/KM24-06C.md",
+    "title": "かいめいKM24-06C航海",
+    "dateISO": "2024-07-07",
+    "excerpt": "KM24-06C航海に参加しました。",
+    "image": "posts/pics/KM24-06C.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/miyazu_1.md",
+    "title": "水研宮津庁舎_撮影テスト",
+    "dateISO": "2024-05-30",
+    "excerpt": "水産研究・教育機構の宮津庁舎に伺いました。",
+    "image": "posts/pics/miyazu.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/biwako.md",
+    "title": "琵琶湖・環境科学研究センター",
+    "dateISO": "2024-05-28",
+    "excerpt": "琵琶湖・環境科学研究センターに伺いました。",
+    "image": "posts/pics/biwako.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/post4.md",
+    "title": "I started my research career at the JAMSTEC",
+    "dateISO": "2024-04-01",
+    "excerpt": "JAMSTECに着任しました。",
+    "image": "posts/pics/jam.jpeg",
+    "highlighted": false
+  },
+  {
+    "url": "posts/post5.md",
+    "title": "Cohesive bond strength of marine aggregates and its role in fragmentation was published in Frontiers in Marine Science.",
+    "dateISO": "2023-08-25",
+    "excerpt": "論文が出ました。",
+    "image": "items/aggregates.png",
+    "highlighted": true
+  }
 ]
